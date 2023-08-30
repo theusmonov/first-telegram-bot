@@ -73,4 +73,11 @@ bot.on("message" , (msg) => {
   }
 })
 
+bot.on("message", async (msg) => {
+      if(msg.text === "Amir Temur xiyoboni"){
+        await bot.sendPhoto(msg.from.id )
+        await bot.sendLocation(msg.from.id, 41.31202411778365, 69.28006720249844)
+      }
+})
+
 
