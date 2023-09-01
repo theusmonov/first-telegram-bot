@@ -15,7 +15,7 @@ bot.onText(/\/start/, msg => {
     reply_markup: {
       keyboard: [
         [{ text: "Biz haqimizda 📋" }, { text: "Istirohat bog'lari 🌳" }],
-        [{ text: "Parklar 🎡" }, { text: "Hayvonot bog'lari 🦘" }],
+        [{ text: "Parklar 🎡" }, { text: "Hayvonot bog'i 🦘" }],
       ],
       resize_keyboard: true
     }
@@ -31,13 +31,8 @@ bot.on("message", (msg) => {
   const { id } = msg.from
 
   if (msg.text === "Biz haqimizda 📋") {
-    bot.sendMessage(id, `Assalomu alaykum, hurmatli botimizning foydalanuvchisi! Sizning qiziqishingizdan hursandmiz va sizga bizning istirohat bog'larimiz haqida batafsil ma'lumot berishga tayyormiz.
-
-    Bizning istirohat bog'larimizning har biri o'ziga xos sharoit va  imkoniyatlarni taklif qiladi. Bizning parklarimiz sizga tabiat bilan sekin va tinch vaqtni o'tkazish imkoniyatini beradi. Bizning parklarimizda siz turli xil o'simliklar, gul va moddalar bilan tanishasiz, shuningdek, ularning har birining o'ziga xos xususiyatlarini o'rganasiz.
-    
-    Hayvonot bog'lari esa bizning istirohat bog'larimizning alohida qismi hisoblanadi. Ular sizga turli xil hayvonot dunyosini ko'rish va ularga yaqinlashish imkoniyatini beradi. Bizning hayvonot bog'imizda siz turli xil hayvonlarni ko'rishingiz mumkin, shu jumladan, turli xil qushlar, reptiliyalar, amfibiylar va xitoylar. Bizning hayvonot bog'imizda sizga hayvonlar haqida ko'proq bilim berish uchun ma'lumotlar ham mavjud.
-    
-    Bizning istirohat bog'larimiz sizning va oilangizning istirohati uchun eng yaxshi joylardan biri hisoblanadi. Biz sizni bizning bog'larimizga taklif qilamiz, sizning va oilangizning huzurli va xushchaqchaq vaqtni o'tkazishingiz uchun!`)
+    bot.sendMessage(id, `Ushbu bot orqali poytaxtimizda joylashgan istirohat bog'lari, parklar, va hayvonot bog'i kabi manzilgohlarga kirish narxlari, shu bilan birgalikda qayerda joylashganligini bilib olishingiz mumkin. \nBotimiz sizga foydasi tegsa biz bundan mamnunmiz :)
+    `)
 
   }
 })
@@ -63,7 +58,7 @@ bot.on("message", (msg) => {
       reply_markup: {
         keyboard: [
           [{ text: "Biz haqimizda 📋" }, { text: "Istirohat bog'lari 🌳" }],
-          [{ text: "Parklar 🎡" }, { text: "Hayvonot bog'lari 🦘" }],
+          [{ text: "Parklar 🎡" }, { text: "Hayvonot bog'i 🦘" }],
         ],
         resize_keyboard: true
       }
@@ -160,6 +155,26 @@ bot.on("message", async (msg) => {
   }
 })
 
+bot.on("message", async (msg) => {
+  const {id} = msg.from
+  if(msg.text === "Hayvonot bog'i 🦘"){
+    bot.sendMessage(id, "Toshkent hayvonot bog'i va uning manzili", {
+      reply_markup: {
+        keyboard: [
+          [{text: "Hayvonot bog'i manzili"}, { text: "Orqaga ⬅️"}]
+        ],
+        resize_keyboard: true
+      }
+    })
+  }
+})
 
+bot.on("message", async (msg) => {
+  const {id} = msg.from
+  if(msg.text === "Hayvonot bog'i manzili"){
+     await bot.sendLocation(id, 41.34393833056312, 69.30998482420895,)
+     await bot.sendMessage(id, `Kattalar uchun kirish narxi - 35000 ming so'm, \n7-16 yoshgacha bo'lganlar uchun 20000 ming so'm, \n Imkoniyati cheklanganlar va 7 yoshdan kichkinalar uchun bepul`)
+  }
+})
 
 
