@@ -71,15 +71,15 @@ const locations = {
   "Yapon bog‘i": {
     lat: 41.33981932532805,
     lon: 69.28241868122475,
-    message: `Bog'ga kirish narxi: 😊\nKattalar uchun - 30000 ming so'm, 👨🏻/👩🏻‍🦰\n3-12 yoshli bolalar uchun -20000 ming so'm,👦🏻/👧🏻\nPensionerlar uchun - 10 000 so‘m.👨🏻‍🦳/👵🏻`
+    message: `Bog'ga kirish narxi: 😊\nKattalar uchun - 30000 so'm, 👨🏻/👩🏻‍🦰\n3-12 yoshli bolalar uchun -20000 so'm,👦🏻/👧🏻\nPensionerlar uchun - 10000 so‘m.👨🏻‍🦳/👵🏻`
   },
   "Botanika bog‘i": {
     lat: 41.347674357939496, lon: 69.31464885191872,
-    message: `Bog'ga kirish narxi: 😊 \nStudentlar uchun - 10000 ming so'm, 👨🏻‍🎓\nMaktab o'quvchilari uchun - 5000 ming so'm, 🏫 \nMaktabgacha ta'limdagilar uchun 3000 ming so'm, 👶🏻 \nPensionerlar uchun - 10 000 so‘m.👨🏻‍🦳/👵🏻, \nVelosipedda sayr qilish 25000 ming so'm`
+    message: `Bog'ga kirish narxi: 😊 \nStudentlar uchun - 10000 so'm, 👨🏻‍🎓\nMaktab o'quvchilari uchun - 5000 so'm, 🏫 \nMaktabgacha ta'limdagilar uchun 3000 so'm, 👶🏻 \nPensionerlar uchun - 10000 so‘m.👨🏻‍🦳/👵🏻, \nVelosipedda sayr qilish 25000 so'm`
   },
   "G‘alaba bog‘i": {
     lat: 41.354318068317994, lon: 69.22297264299296,
-    message: `Shon-sharaf muzeyida aylanish narxlari 4000-50000 ming so'mgacha narxlarda bo'ladi 😊 \nHar kuni 08:00 dan 17:00 gacha ochiq 🕔`
+    message: `Shon-sharaf muzeyida aylanish narxlari 4000-50000 so'mgacha narxlarda bo'ladi 😊 \nHar kuni 08:00 dan 17:00 gacha ochiq 🕔`
   },
   "Adiblar xiyoboni": { lat: 41.302578062073025, lon: 69.23554547282222, message: `Kirish mutlaqo tekin 😊\nHar kuni 07:00 dan 24:00 gacha ochiq 🕔` },
   "Eco Park": { lat: 41.30994936610001, lon: 69.29603052904604, message: `Kirish mutlaqo tekin 😊\nHar kuni 05:00 dan 23:00 gacha ochiq 🕔` },
@@ -126,7 +126,7 @@ const locations2 = {
   },
   "ASHXOBOD ISTIROHAT VA MADANIYAT BOG'I": {
     lat: 41.3046129944194, lon: 69.30266079475221,
-    message: `Kirish narxi 4000 ming so'm 😊, \nParkda juda ajoyib atraksionlar mavjud 🎢, \nHar kuni 10:00 dan 22:00 gacha ochiq 🕔`
+    message: `Kirish narxi 4000 so'm 😊, \nParkda juda ajoyib atraksionlar mavjud 🎢, \nHar kuni 10:00 dan 22:00 gacha ochiq 🕔`
   },
   "DO'STLIK MADANIYAT VA ISTIROHAT BOG'I": {
     lat: 41.28906760243861, lon: 69.25202907620032,
@@ -173,7 +173,7 @@ bot.on("message", async (msg) => {
   const {id} = msg.from
   if(msg.text === "Hayvonot bog'i manzili"){
      await bot.sendLocation(id, 41.34393833056312, 69.30998482420895,)
-     await bot.sendMessage(id, `Kattalar uchun kirish narxi - 35000 ming so'm, \n7-16 yoshgacha bo'lganlar uchun 20000 ming so'm, \n Imkoniyati cheklanganlar va 7 yoshdan kichkinalar uchun bepul`)
+     await bot.sendMessage(id, `Kattalar uchun kirish narxi - 35000 so'm, \n7-16 yoshgacha bo'lganlar uchun 20000 so'm, \n Imkoniyati cheklanganlar va 7 yoshdan kichkinalar uchun bepul`)
   }
 })
 
