@@ -31,7 +31,7 @@ bot.on("message", (msg) => {
   const { id } = msg.from
 
   if (msg.text === "Biz haqimizda 📋") {
-    bot.sendMessage(id, `Ushbu bot orqali poytaxtimizda joylashgan istirohat bog'lari, parklar, va hayvonot bog'i kabi manzilgohlarga kirish narxlari, shu bilan birgalikda qayerda joylashganligini bilib olishingiz mumkin. \nBotimiz sizga foydasi tegsa biz bundan mamnunmiz :)
+    bot.sendMessage(id, `Ushbu bot orqali poytaxtimizda joylashgan istirohat bog'lari, parklar, va hayvonot bog'i kabi manzilgohlarga kirish narxlari, shu bilan birgalikda qayerda joylashganligini bilib olishingiz mumkin. \nBotimizning sizga foydasi tegsa, biz bundan mamnunmiz :)
     `)
 
   }
